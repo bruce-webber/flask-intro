@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Roster</h2>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Numbers</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for person in people %}
+            <tr>
+              <td>{{ person.first_name }} {{ person.last_name }}</td>
+              <td>
+                {% for phone in person.phones %}
+                  {{ phone.phone_number }} ({{ phone.phone_type }})<br />
+                {% endfor %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
