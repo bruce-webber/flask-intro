@@ -16,5 +16,5 @@ Python object to a template.
 
 ## Team Accolade
 
-This example a small SQLite database, a corresponding SQLAlchemy database
-and more advanced templating.
+This example includes a small SQLite database, a corresponding SQLAlchemy
+database and more advanced templating.
